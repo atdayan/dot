@@ -1,0 +1,19 @@
+#!/bin/bash
+
+alias vi='vim'
+alias z='zathura'
+alias p='pacman'
+alias ka='killall'
+alias sdn='shutdown -h now'
+alias ls='ls -hN --color=auto --group-directories-first'
+alias grep='grep --color=auto'
+alias diff='diff --color=auto'
+alias ccat='highlight --out-format=ansi'
+alias yt='youtube-dl --add-metadata -i'
+alias yta='yt -x -f bestaudio/best'
+
+set -o vi
+
+for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
+	alias $command="sudo $command"
+done; unset command

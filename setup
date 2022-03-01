@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ln -sf $PWD/bashconfig $HOME/.bash_aliases
+ln -sf $PWD/vimrc $HOME/.vimrc
