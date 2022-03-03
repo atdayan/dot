@@ -1,6 +1,6 @@
-call plug#begin()
-Plug 'dylanaraps/wal.vim'
-call plug#end()
+"call plug#begin()
+"Plug 'dylanaraps/wal.vim'
+"call plug#end()
 
 set nocompatible
 set number
@@ -32,7 +32,7 @@ set wildmenu
 syntax enable
 filetype plugin on
 set background=dark
-colorscheme wal
+colorscheme pablo
 
 
 command! MakeTags !ctags -R .

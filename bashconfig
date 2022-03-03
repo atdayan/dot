@@ -1,9 +1,10 @@
 #!/bin/bash
 
-alias vi='vim'
-alias z='zathura'
-alias p='pacman'
-alias ka='killall'
+alias c=clear
+alias vi=vim
+alias z=zathura
+alias p=pacman
+alias ka=killall
 alias sdn='shutdown -h now'
 alias ls='ls -hN --color=auto --group-directories-first'
 alias grep='grep --color=auto'
