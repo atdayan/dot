@@ -1,5 +1,12 @@
 #!/bin/bash
 
+setxkbmap -option caps:escape
+
+export CONFIGDIR=$HOME/rep/dotfiles
+export PATH=$CONFIGDIR/bin:$CONFIGDIR/lynx:$PATH
+
+alias '?'=duck
+alias '??'=google
 alias c=clear
 alias vi=vim
 alias z=zathura
