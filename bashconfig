@@ -1,14 +1,14 @@
 #!/bin/bash
 
-setxkbmap -option caps:escape
-
 export CONFIGDIR=$HOME/rep/dotfiles
-export PATH=$CONFIGDIR/bin:$CONFIGDIR/lynx:$PATH
+export PATH=$CONFIGDIR/scripts:$CONFIGDIR/lynx:$PATH
+export PS1="\[$(tput bold)\]\[$(tput setaf 2)\]\W\[$(tput sgr0)\]: \[$(tput sgr0)\]"
 
 alias '?'=duck
 alias '??'=google
 alias c=clear
 alias vi=vim
+alias top=htop
 alias z=zathura
 alias p=pacman
 alias ka=killall
@@ -19,9 +19,16 @@ alias diff='diff --color=auto'
 alias ccat='highlight --out-format=ansi'
 alias yt='youtube-dl --add-metadata -i'
 alias yta='yt -x -f bestaudio/best'
+alias 'tmuxk'='tmux kill-session -t'
 
 set -o vi
+
+if [ -f $HOME/.cache/wal/sequences ]; then
+    (cat $HOME/.cache/wal/sequences &)
+fi
 
 for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
 	alias $command="sudo $command"
 done; unset command
+
+setxkbmap -option compose:menu,ctrl:menu_rctrl

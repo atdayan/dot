@@ -1,7 +1,3 @@
-"call plug#begin()
-"Plug 'dylanaraps/wal.vim'
-"call plug#end()
-
 set nocompatible
 set number
 set relativenumber
@@ -33,6 +29,5 @@ syntax enable
 filetype plugin on
 set background=dark
 colorscheme pablo
-
 
 command! MakeTags !ctags -R .
