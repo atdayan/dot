@@ -21,12 +21,14 @@ set viminfo='20,<1000,s1000     " prevents truncated yanks, deletes, etc.
 set foldmethod=manual
 set hidden
 set history=100
+set splitright
+set splitbelow
 
 set path+=**
 set wildmenu
 
 syntax enable
-filetype plugin on
+filetype plugin indent on
 set background=dark
 colorscheme pablo
 

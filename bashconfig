@@ -31,4 +31,4 @@ for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
 	alias $command="sudo $command"
 done; unset command
 
-setxkbmap -option compose:menu,ctrl:menu_rctrl
+setxkbmap -option compose:caps
