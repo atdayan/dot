@@ -27,6 +27,8 @@ set splitbelow
 set path+=**
 set wildmenu
 
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 syntax enable
 filetype plugin indent on
 set background=dark
