@@ -1,7 +1,7 @@
 set nocompatible
 set number
-set relativenumber
 set ruler
+set showmode
 set expandtab
 set tabstop=4
 set softtabstop=4
@@ -9,7 +9,8 @@ set shiftwidth=4
 set smartindent
 set smarttab
 set autoindent
-set textwidth=73    " enough for line numbers + git gutter and spaces within 80
+set autowrite
+set textwidth=72    " enough for line numbers + git gutter and spaces within 80
 set nobackup
 set noswapfile
 set nowritebackup
@@ -31,7 +32,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 syntax enable
 filetype plugin indent on
+set shortmess=aoOtTI
 set background=dark
-colorscheme pablo
 
 command! MakeTags !ctags -R .
